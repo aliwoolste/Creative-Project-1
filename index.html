@@ -2,15 +2,23 @@
 <html>
 	<head>
 		<title>Piglatin Translator</title>
-
+		<link rel="stylesheet" type="text/css" href="main1.css">
 		<script type="text/javascript">
-			
 		</script>
 	</head>
 	<body>
-		<h1>Translate Your Name to Pig Latin!</h1>
-		<p>Enter Name Here:<input type="text" name="translator"></p>
-		<button onclick="">Translate</button>
-
+		<div class="container">
+			<p id='translate'>Translate Your Name to Pig Latin!</p>
+			<!-- <p id='namebox'>Enter Name Here:<input type="text" name="translator"></p> -->
+			<p id='entername'>Enter Name Here:</p>
+			<div class="centernamebox">
+				<input id='namebox' type="text" name="translator">
+			</div>
+			<div class="centerbutton">
+				<button class='buttonformat'onclick="">Translate</button>
+			</div>
+		</div>
+		<!-- <div id="lighterbackground" class='lighterbackground'>
+		</div> -->
 	</body>
 </html>
