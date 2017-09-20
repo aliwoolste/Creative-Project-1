@@ -10,9 +10,24 @@
 
 			function translater() {
 				// body...
-				alert(document.getElementById('namebox').value);
+				var fullName = document.getElementById('namebox').value;
+				var names = fullName.split(" ");
 
+				// translate first, middle and last names individually
+				for (var i = 0; i < names.lenght(); i--) {
+					var name = names[i];
 
+					alert(name);
+					// evaluate first letter in name
+					if (name.substr(0,1))
+
+				}
+
+				// alert(document.getElementById('namebox').value);
+			}
+
+			function isConsonant() {
+				// body...
 			}
 
 		</script>
