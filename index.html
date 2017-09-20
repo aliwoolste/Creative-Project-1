@@ -3,54 +3,22 @@
 	<head>
 		<title>Piglatin Translator</title>
 		<link rel="stylesheet" type="text/css" href="main1.css">
-
-		<script>
-
-			function toPiglatin() {
-				// body...
-				var fullName = document.getElementById('namebox').value;
-				var names = fullName.split(" ");
-
-
-				alert(fullName);
-
-				// translate first, middle and last names individually
-				for (var i = 0; i < names.length; i--) {
-					var name = names[i];
-
-					alert(name);
-					// evaluate first letter in name
-					if (name.substr(0,1)) {
-
-					}
-
-				}
-
-				
-			}
-
-			function isConsonant() {
-				// body...
-			}
-
+		<script type="text/javascript">
 		</script>
-		
 	</head>
 	<body>
 		<div class="container">
-			<p id='translate'>Translate Your Name to Pig Latin!</p>
-			<!-- <p id='namebox'>Enter Name Here:<input type="text" name="translator"></p> -->
-			<p id='entername'>Enter Name Here:</p>
-			<div class="centernamebox">
-				<input id='namebox' type="text" name="translator">
+			<div class="container2">
+				<p id='translate'>Translate Your Name to Pig Latin!</p>
+				<!-- <p id='namebox'>Enter Name Here:<input type="text" name="translator"></p> -->
+				<p id='entername'>Enter Name Here:</p>
+				<div class="centernamebox">
+					<input id='namebox' type="text" name="translator">
+				</div>
+				<div class="centerbutton">
+					<button class='buttonformat'onclick="">Translate</button>
+				</div>
 			</div>
-
-			<div class="centerbutton">
-				<input type="button" value="Translate" class='buttonformat' onclick="toPiglatin()" />
-			</div>
-
 		</div>
-		<!-- <div id="lighterbackground" class='lighterbackground'>
-		</div> -->
 	</body>
 </html>

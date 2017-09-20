@@ -9,6 +9,21 @@
       position: relative;
      
 }
+
+.container2 {
+ 
+  background-position-x: 100px;
+  background-size: cover;
+  background-position: center -200px;
+  width: 100vw;
+  height:100vh;
+  flex-direction:column;   
+  position: relative;
+  background-color: rgba(255,255,255,.3);
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
       
 #translate{
       text-align: center;
@@ -16,24 +31,27 @@
       font-size: 80px;
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display:block;
-      margin-bottom: 110px;
+      margin-bottom: 15px;
       margin-top: 0px;
       font-weight: normal;
+
 }
       
 #entername{
       text-align: center;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: 40px;
+      margin-bottom: 10px;
+      margin-top: 10px;
 }
 
 #namebox{
   text-align: center;
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  /* font-size: 40px; */
   height: 60px;
   width: 200px;
-  border-radius: 8px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 25px;
 
 }
 .centernamebox{
@@ -45,40 +63,21 @@
 }
       
 .buttonformat{
-      background-color: gray;
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      border-radius: 8px;
-      /* text-align: center; */
-      text-decoration: none;
-      /* display: inline-block; */
-      font-size: 16px;;
-      position: absolute;
-      top: 60%;
+  background-color: #696868;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;;
+  position: relative;
+  /* top: 60%; */
+  margin-bottom: 70px;
 }
 
-/* h1{
-  color:#2B2929;
-  font-size: 80px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display:block;
-  margin-bottom: 110px;
-  margin-top: 0px;
-  font-weight: normal;
 
-} */
-/*       
-.lighterbackground{
-  background-color: rgba(255,255,255,.6);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  display:flex;
-  align-items:center;
-  justify-content: center;
-} */
+
+
       
       
