@@ -3,7 +3,35 @@
 	<head>
 		<title>Piglatin Translator</title>
 		<link rel="stylesheet" type="text/css" href="main1.css">
-		<script type="text/javascript">
+		<script>
+
+			function toPiglatin() {
+				// body...
+				var fullName = document.getElementById('namebox').value;
+				var names = fullName.split(" ");
+
+
+				alert(fullName);
+
+				// translate first, middle and last names individually
+				for (var i = 0; i < names.length; i--) {
+					var name = names[i];
+
+					alert(name);
+					// evaluate first letter in name
+					if (name.substr(0,1)) {
+
+					}
+
+				}
+
+				
+			}
+
+			function isConsonant() {
+				// body...
+			}
+
 		</script>
 	</head>
 	<body>
@@ -16,7 +44,7 @@
 					<input id='namebox' type="text" name="translator">
 				</div>
 				<div class="centerbutton">
-					<button class='buttonformat'onclick="">Translate</button>
+					<button class='buttonformat' onclick="">Translate</button>
 				</div>
 			</div>
 		</div>
