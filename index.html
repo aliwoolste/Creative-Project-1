@@ -4,6 +4,10 @@
 		<title>Piglatin Translator</title>
 		<link rel="stylesheet" type="text/css" href="main1.css">
 		<script>
+			var vowelSet = new Set();
+			vowelSet.add({"a","e","i","o","u"});
+
+
 
 			function toPiglatin() {
 				// body...
@@ -11,7 +15,7 @@
 				var names = fullName.split(" ");
 
 
-				alert(fullName);
+				alert(vowelSet.has("e"));
 
 				// translate first, middle and last names individually
 				for (var i = 0; i < names.length; i--) {
@@ -28,8 +32,9 @@
 				
 			}
 
-			function isConsonant() {
+			function isConsonant(char) {
 				// body...
+				
 			}
 
 		</script>
