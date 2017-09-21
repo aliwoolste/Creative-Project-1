@@ -11,6 +11,8 @@
 			vowelSet.add("o");
 			vowelSet.add("u");
 
+			var consonantSet = getConsonantSet();
+
 
 
 			function toPiglatin() {
@@ -19,7 +21,8 @@
 				var names = fullName.split(" ");
 
 
-				alert(vowelSet.has("e"));
+				alert(consonantSet.has("th"));
+
 
 				// translate first, middle and last names individually
 				for (var i = 0; i < names.length; i--) {
@@ -34,6 +37,36 @@
 				}
 
 				
+			}
+			
+			function getConsonantSet() {
+				// body...
+				var consonantSet = new Set();
+				consonantSet.add("b");
+				consonantSet.add("c");
+				consonantSet.add("d");
+				consonantSet.add("f");
+				consonantSet.add("g");
+				consonantSet.add("h");
+				consonantSet.add("j");
+				consonantSet.add("k");
+				consonantSet.add("l");
+				consonantSet.add("m");
+				consonantSet.add("n");
+				consonantSet.add("p");
+				consonantSet.add("q");
+				consonantSet.add("r");
+				consonantSet.add("s");
+				consonantSet.add("t");
+				consonantSet.add("v");
+				consonantSet.add("w");
+				consonantSet.add("x");
+				consonantSet.add("y");
+				consonantSet.add("z");
+				consonantSet.add("ch");
+				consonantSet.add("th");
+				consonantSet.add("sh");
+
 			}
 
 			function isConsonant(char) {
