@@ -15,14 +15,11 @@
 				var names = fullName.split(" ");
 
 
-				alert(consonantSet.has("th"));
-
-				alert(names[0] + " Next name: " + names[1]);
-
 				// translate first, middle and last names individually
 				for (var i = 0; i < names.length-1; i--) {
-					var name = names[i];
+					var name = names[i].toString();
 
+					alert(names[i])
 					
 					// evaluate first letter in name
 					if (name.substr(0,1)) {
