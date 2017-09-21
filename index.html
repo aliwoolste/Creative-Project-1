@@ -5,32 +5,54 @@
 		<link rel="stylesheet" type="text/css" href="main1.css">
 		<script>
 			var vowelSet = getVowelSet();
-			var consonantSet = getConsonantSet();
-
-
 
 			function toPiglatin() {
 				// body...
 				var fullName = document.getElementById('namebox').value.toLowerCase().toString();
 				var names = fullName.split(" ");
-
+				var translatedNames = [""];
 
 				// translate first, middle and last names individually
-				for (var i = 0; i < names.length-1; i--) {
-					var name = names[i];
+				for (var i = 0; i < names.length; i++) {
+					var firstCharSequence = "";
+					var charCount = 0;
 
-					alert(names[i])
-					
-					// evaluate first letter in name
-					if (consonantSet.has(names[i].substr(0,1))) {
-						alert("non typed worked");
+					// word starts with vowel
+					if (vowelSet.has(names[i].substr(0,1))) {
+						firstCharSequence = "y"
+					} else {
+						if (isAlpha(names[i].substr(0, 1))) {
+							// grab string of letter preceding first vowel
+							while (!vowelSet.has(names[i].substr(charCount, 1)) && isAlpha(names[i].substr(0, 1))) {
+								firstCharSequence += names[i].substr(charCount, 1);
+								charCount++;
+							}
+						} else {
+							alert("Invalid input");
+							return;
+						}
 					}
+
+					transName = names[i].substr(charCount, names[i].length) + firstCharSequence + "ay";
+					transName.substr(0,1).toUpperCase();
+
+					translatedNames.push(transName);
 
 				}
 
+				var displayText ="";
+				for (var i = 0; i < translatedNames.length; i++) {
+					displayText += translatedNames[i] + " ";
+				}
+
+				alert("Your Pig Latin Name is:\n" + displayText);
 				
 			}
 			
+			function isAlpha(str) {
+			  return /^[a-zA-Z]+$/.test(str);
+			}
+
 			function getVowelSet() {
 				// body...
 				var vowelSet = new Set();
@@ -41,37 +63,6 @@
 				vowelSet.add("u");
 
 				return vowelSet;
-			}
-
-			function getConsonantSet() {
-				// body...
-				var consonantSet = new Set();
-				consonantSet.add("b");
-				consonantSet.add("c");
-				consonantSet.add("d");
-				consonantSet.add("f");
-				consonantSet.add("g");
-				consonantSet.add("h");
-				consonantSet.add("j");
-				consonantSet.add("k");
-				consonantSet.add("l");
-				consonantSet.add("m");
-				consonantSet.add("n");
-				consonantSet.add("p");
-				consonantSet.add("q");
-				consonantSet.add("r");
-				consonantSet.add("s");
-				consonantSet.add("t");
-				consonantSet.add("v");
-				consonantSet.add("w");
-				consonantSet.add("x");
-				consonantSet.add("y");
-				consonantSet.add("z");
-				consonantSet.add("ch");
-				consonantSet.add("th");
-				consonantSet.add("sh");
-
-				return consonantSet;
 			}
 
 		</script>
