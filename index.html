@@ -4,13 +4,7 @@
 		<title>Piglatin Translator</title>
 		<link rel="stylesheet" type="text/css" href="main1.css">
 		<script>
-			var vowelSet = new Set();
-			vowelSet.add("a");
-			vowelSet.add("e");
-			vowelSet.add("i");
-			vowelSet.add("o");
-			vowelSet.add("u");
-
+			var vowelSet = getVowelSet();
 			var consonantSet = getConsonantSet();
 
 
@@ -23,12 +17,13 @@
 
 				alert(consonantSet.has("th"));
 
+				alert(names[0] + " Next name: " + names[1]);
 
 				// translate first, middle and last names individually
-				for (var i = 0; i < names.length; i--) {
+				for (var i = 0; i < names.length-1; i--) {
 					var name = names[i];
 
-					alert(name);
+					
 					// evaluate first letter in name
 					if (name.substr(0,1)) {
 
@@ -39,6 +34,18 @@
 				
 			}
 			
+			function getVowelSet() {
+				// body...
+				var vowelSet = new Set();
+				vowelSet.add("a");
+				vowelSet.add("e");
+				vowelSet.add("i");
+				vowelSet.add("o");
+				vowelSet.add("u");
+
+				return vowelSet;
+			}
+
 			function getConsonantSet() {
 				// body...
 				var consonantSet = new Set();
@@ -68,12 +75,6 @@
 				consonantSet.add("sh");
 
 				return consonantSet;
-
-			}
-
-			function isConsonant(char) {
-				// body...
-				
 			}
 
 		</script>
