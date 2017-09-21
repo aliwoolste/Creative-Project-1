@@ -5,13 +5,17 @@
 		<link rel="stylesheet" type="text/css" href="main1.css">
 		<script>
 			var vowelSet = new Set();
-			vowelSet.add({"a","e","i","o","u"});
+			vowelSet.add("a");
+			vowelSet.add("e");
+			vowelSet.add("i");
+			vowelSet.add("o");
+			vowelSet.add("u");
 
 
 
 			function toPiglatin() {
 				// body...
-				var fullName = document.getElementById('namebox').value;
+				var fullName = document.getElementById('namebox').value.toLowerCase();
 				var names = fullName.split(" ");
 
 
